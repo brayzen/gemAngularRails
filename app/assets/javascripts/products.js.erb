@@ -3,12 +3,10 @@
 
 
   app.directive("productDescription", function() {
-    var literal = {
+    return {
       restrict: 'E',
       templateUrl: "<%= asset_path 'product-description.html' %>"
     };
-    console.log(literal);
-    return literal
   });
 
   app.directive("productReviews", function() {
@@ -45,19 +43,16 @@
   });
 
   app.directive("productGallery", function() {
-    var literal = {
+    return {
       restrict: "E",
       templateUrl: "<%= asset_path 'product-gallery.html' %>",
       controller: function() {
         this.current = 0;
         this.setCurrent = function(imageNumber){
           this.current = imageNumber || 0;
-         console.log(this.current + 'is the current image number');
         };
       },
       controllerAs: "gallery"
     };
-    console.log(literal);
-    return literal;
   });
 })();(function() {})();
