@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require angular
-//= require main
-//= require_tree .
+//= require angular.min
+//= require app
+//= require products
+// require_tree .
